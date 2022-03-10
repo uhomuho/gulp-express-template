@@ -47,7 +47,6 @@ exports.wrapper = (path, ext, handler, file) => {
 				)
 				.pipe( gulp.dest( smc.chunkDest ) )
 				.on("finish", resolve)
-				.pipe( browserSync.stream() )
 			})
 		})
 
@@ -56,6 +55,6 @@ exports.wrapper = (path, ext, handler, file) => {
 		cb()
 	}
 
-	fn.displayName = `Compile ${ext[0]}`
+	fn.displayName = `Compile ${file || ext[0]}`
 	return gulp.series(fn)
 }

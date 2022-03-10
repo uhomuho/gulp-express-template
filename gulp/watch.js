@@ -15,6 +15,8 @@ module.exports = () => {
 		open: process.env.RESTART == "false"
 	})
 
+	watch("public/**/**/**/**/**/*").on("change", browserSync.reload)
+
 	// При изменении шаблонов страниц, перезагружаем окно браузера
 	watch("views/**/**/**/**/*.pug").on("change", browserSync.reload)
 

@@ -1,0 +1,3 @@
+{
+	"ignore": [ "gulp/**/*", "src/js/**/**/**/*", "public/js/**/**/**/*", "sourcemap.json" ]
+}
